@@ -21,12 +21,12 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <a href="" class="header-logo">
           <img src="./images/logo.svg" alt="site logo" />
         </a>
         <nav class="header-nav">
-          <ul class="header-list">
+          <ul class="header-list flex">
             <li class="header-list-item">
               <a href="#about" class="header-list-link">About</a>
             </li>
@@ -48,7 +48,7 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
           <ul class="hero-list">
             <li class="hero-list-item">
               <a href="" target="_blank" rel="noopener noreferrer nofollow" class="hero-list-link"
@@ -71,8 +71,8 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="about section" id="about">
-        <div class="container">
+      <section class="section" id="about">
+        <div class="container about-container">
           <ul class="about-list">
             <li class="about-list-item">
               <img src="./images/about-img-1.jpg" alt="haircut" width="270" />
@@ -81,18 +81,20 @@
               <img src="./images/about-img-2.jpg" alt="haircut" width="270" />
             </li>
           </ul>
-          <p class="about-subtitle subtitle">About</p>
-          <h2 class="about-title title">Best Barbershop in your city</h2>
-          <p class="about-desc desc">
-            If you want to add more confidence to your image, you should definitely visit us.
-          </p>
-          <p class="about-text">
-            We are a team that never stops at what has been achieved and are thirsty for changes.
-            And when you fall into the hands of our master, you will never be the same again. We are
-            a team that is always "on the same wave" with clients. Therefore, we are always ready to
-            improve everyone who comes to us!
-          </p>
-          <button type="button" class="about-btn btn">Online-booking</button>
+          <div class="about-content">
+            <p class="about-subtitle subtitle">About</p>
+            <h2 class="about-title title">Best Barbershop in your city</h2>
+            <p class="about-desc desc">
+              If you want to add more confidence to your image, you should definitely visit us.
+            </p>
+            <p class="about-text">
+              We are a team that never stops at what has been achieved and are thirsty for changes.
+              And when you fall into the hands of our master, you will never be the same again. We
+              are a team that is always "on the same wave" with clients. Therefore, we are always
+              ready to improve everyone who comes to us!
+            </p>
+            <button type="button" class="about-btn btn">Online-booking</button>
+          </div>
         </div>
       </section>
       <!-- Prices section -->
@@ -100,48 +102,50 @@
         <div class="container">
           <p class="prices-subtitle subtitle">Spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
-          <ul class="prices-list">
-            <li class="prices-list-item">
-              <p class="prices-list-text">Men’s haircut</p>
-              <p class="prices-list-text">from 300 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Beard trim</p>
-              <p class="prices-list-text">from 300 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Mustache trim</p>
-              <p class="prices-list-text">from 200 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Straight razor shave</p>
-              <p class="prices-list-text">from 200 uah.</p>
-            </li>
-          </ul>
-          <ul class="prices-list">
-            <li class="prices-list-item">
-              <p class="prices-list-text">Trainee’s haircut</p>
-              <p class="prices-list-text">from 50 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Haircut under the nozzle</p>
-              <p class="prices-list-text">from 200 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Children’s haircut (0-12 y.o.)</p>
-              <p class="prices-list-text">from 300 uah.</p>
-            </li>
-            <li class="prices-list-item">
-              <p class="prices-list-text">Camouflage of gray hair</p>
-              <p class="prices-list-text">from 200 uah.</p>
-            </li>
-          </ul>
+          <div class="prices-wrap">
+            <ul class="prices-list">
+              <li class="prices-list-item">
+                <p class="prices-list-text">Men’s haircut</p>
+                <p class="prices-list-text">from 300 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Beard trim</p>
+                <p class="prices-list-text">from 300 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Mustache trim</p>
+                <p class="prices-list-text">from 200 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Straight razor shave</p>
+                <p class="prices-list-text">from 200 uah.</p>
+              </li>
+            </ul>
+            <ul class="prices-list">
+              <li class="prices-list-item">
+                <p class="prices-list-text">Trainee’s haircut</p>
+                <p class="prices-list-text">from 50 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Haircut under the nozzle</p>
+                <p class="prices-list-text">from 200 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Children’s haircut (0-12 y.o.)</p>
+                <p class="prices-list-text">from 300 uah.</p>
+              </li>
+              <li class="prices-list-item">
+                <p class="prices-list-text">Camouflage of gray hair</p>
+                <p class="prices-list-text">from 200 uah.</p>
+              </li>
+            </ul>
+          </div>
           <button type="button" class="prices-btn btn">Online-booking</button>
         </div>
       </section>
       <!-- Features section -->
       <section class="features section">
-        <div class="container">
+        <div class="container features-container">
           <ul class="features-list">
             <li class="features-list-item">
               <span class="features-list-count">600</span>
@@ -160,12 +164,14 @@
               <p class="features-list-text">Gifts for regular customers</p>
             </li>
           </ul>
-          <p class="features-subtitle subtitle">Old traditional school</p>
-          <h2 class="features-title title">¿Why people come to us?</h2>
-          <p class="features-desc desc">
-            Only good things are said about us. But it's better to see and feel 1 time than read 10
-            times.
-          </p>
+          <div class="features-wrap">
+            <p class="features-subtitle subtitle">Old traditional school</p>
+            <h2 class="features-title title">¿Why people come to us?</h2>
+            <p class="features-desc desc">
+              Only good things are said about us. But it's better to see and feel 1 time than read
+              10 times.
+            </p>
+          </div>
         </div>
       </section>
       <!-- Barbers section -->

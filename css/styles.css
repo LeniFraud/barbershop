@@ -21,10 +21,11 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  background-color: #cecece;
 }
 
 .btn {
+  min-width: 160px;
+  min-height: 40px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -78,19 +79,33 @@ body {
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
+  background-color: rgb(128, 128, 128);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
+  margin-right: 131px;
 }
 
 .header-nav {
+  margin-right: auto;
 }
 
 .header-list {
+  display: flex;
+  gap: 30px;
 }
 
 .header-list-item {
 }
+
+/* .header-list-item:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .header-list-link,
 .header-contact-link {
@@ -106,7 +121,8 @@ body {
   color: var(--accent-color);
 }
 
-.header-contact {
+.header-contact-link {
+  margin-right: 43px;
   text-transform: uppercase;
 }
 
@@ -116,6 +132,10 @@ body {
 /* -- Hero section -- */
 
 .hero {
+}
+
+.hero-container {
+  display: flex;
 }
 
 .hero-list {
@@ -138,7 +158,9 @@ body {
 }
 
 .hero-content {
+  flex-grow: 1;
   padding: 272px 100px 208px;
+  background-color: #cecece;
 }
 
 .hero-subtitle {
@@ -160,13 +182,21 @@ body {
 
 /* -- About section -- */
 
-.about {
+.about-container {
+  display: flex;
+  gap: 30px;
 }
 
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 
 .about-list-item {
+}
+
+.about-content {
+  max-width: 470px;
 }
 
 .about-subtitle {
@@ -197,6 +227,7 @@ body {
 /* -- Prices section -- */
 
 .prices {
+  background-color: #494949;
 }
 
 .prices-subtitle {
@@ -209,9 +240,25 @@ body {
   color: var(--primary-title-color);
 }
 
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .prices-list {
+  width: calc((100% - 30px) / 2);
   padding: 30px 20px;
   border: 1px solid #ffffff;
+}
+
+.prices-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.prices-list-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-list-text {
@@ -231,7 +278,16 @@ body {
 .features {
 }
 
+.features-container {
+  display: flex;
+  padding-left: 115px;
+  gap: 130px;
+}
+
 .features-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
 }
 
 .features-list-item {
@@ -240,6 +296,14 @@ body {
   height: 133px;
   text-align: center;
   background-color: #f7f7f7;
+}
+
+.features-list-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.features-list-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .features-list-count {
@@ -255,6 +319,11 @@ body {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+}
+
+.features-wrap {
+  max-width: 500px;
+  padding-top: 9px;
 }
 
 .features-subtitle {
@@ -284,9 +353,12 @@ body {
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-list-item {
+  width: calc((100% - 30px * 2) / 3);
 }
 
 .barbers-list-title {
