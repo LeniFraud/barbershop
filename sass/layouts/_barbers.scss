@@ -1,0 +1,48 @@
+.barbers__section {
+  background-color: $secondary-bg-color;
+}
+
+.barbers__container {
+  @include adaptive(tab-only) {
+    padding: 0 135px;
+  }
+}
+
+.barbers__title {
+  margin-bottom: 44px;
+  color: $secondary-title-color;
+}
+
+.barbers__list {
+  @include adaptive(desk) {
+    display: flex;
+    gap: $base-gap;
+  }
+}
+
+.barbers__item {
+  &:not(:last-child) {
+    @include adaptive(not-desk) {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+.barbers__name {
+  margin-top: 30px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.barbers__text {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}

@@ -1,0 +1,121 @@
+.prices__section {
+  background-color: $spare-bg-color;
+  background-image: url('../images/prices-bg-mob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include bg-image {
+    background-image: url('../images/prices-bg-mob@2x.png');
+  }
+
+  @include adaptive(tab-min) {
+    background-image: url('../images/prices-bg-tab.png');
+
+    @include bg-image {
+      background-image: url('../images/prices-bg-tab@2x.png');
+    }
+  }
+
+  @include adaptive(desk) {
+    background-image: url('../images/prices-bg-desk.png');
+
+    @include bg-image {
+      background-image: url('../images/prices-bg-desk@2x.png');
+    }
+  }
+}
+
+.prices__headline {
+  color: $transparent-headline-color;
+}
+
+.prices__title {
+  margin-bottom: 44px;
+
+  @include adaptive(mob-only) {
+    font-size: 40px;
+    line-height: calc(47 / 40);
+  }
+}
+
+.prices__wrap {
+  margin-bottom: 44px;
+  padding: 30px 10px;
+
+  @include adaptive(mob-and-tab) {
+    padding: 30px 20px 30px 40px;
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+    @include adaptive(tab-only) {
+      padding: 32px 40px;
+    }
+  }
+
+  @include adaptive(desk) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.prices__list {
+  @include adaptive(desk) {
+    flex-basis: calc((100% - 30px) / 2);
+    padding: 30px 20px;
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+}
+
+.prices__list--first {
+  @include adaptive(not-desk) {
+    margin-bottom: 20px;
+  }
+
+  @include adaptive(desk) {
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+.prices__item {
+  @include centered-flex(space-between, baseline);
+  gap: 4px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    flex-grow: 1;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+  }
+
+  @include adaptive(tab-min) {
+    gap: 12px;
+  }
+}
+
+.prices__text {
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+
+  &:last-child {
+    order: 1;
+  }
+
+  @include adaptive(mob-min) {
+    font-size: 14px;
+  }
+
+  @include adaptive(tab-min) {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+}

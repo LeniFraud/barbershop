@@ -1,0 +1,144 @@
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+}
+
+.header__container {
+  position: relative;
+  padding-top: 40px;
+  @include adaptive(tab-min) {
+    display: flex;
+    padding-top: 32px;
+  }
+}
+
+.logo {
+  @include adaptive(tab-min) {
+    margin: 0 57px 0 11px;
+  }
+
+  @include adaptive(desk) {
+    margin: 0 130px 0 0;
+  }
+}
+
+.logo__icon {
+  @include sizes(69px, 55px);
+  fill: $primary-link-color;
+
+  @include adaptive(tab-min) {
+    fill: $secondary-link-color;
+  }
+}
+
+.menu {
+  @include adaptive(mob-only) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include sizes(70%, 100vh);
+    padding: 88px 15px 40px 20px;
+    background-color: $primary-bg-color;
+    overflow-y: scroll;
+    transform: translateX(1%);
+    transition: transform $duration $timing;
+
+    .overlay.is-hidden & {
+      transform: translateX(101%);
+    }
+
+    @include adaptive(mob-min) {
+      padding: 118px 15px 40px 40px;
+    }
+  }
+
+  @include adaptive(tab-min) {
+    display: flex;
+    padding-top: 8px;
+  }
+}
+
+.menu__btn {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+  z-index: 100;
+  @include centered-flex();
+  background-color: transparent;
+  border: none;
+
+  @include adaptive(tab-min) {
+    display: none;
+  }
+}
+
+.menu__icon {
+  transition: opacity $duration $timing;
+}
+
+.menu__icon--open {
+  fill: $primary-link-color;
+
+  .menu__btn.is-open & {
+    opacity: 0;
+  }
+}
+
+.menu__icon--close {
+  fill: $secondary-link-color;
+
+  .menu__btn & {
+    opacity: 0;
+  }
+
+  .menu__btn.is-open & {
+    opacity: 1;
+  }
+}
+
+.nav {
+  @include adaptive(mob-only) {
+    margin-bottom: 44px;
+  }
+}
+
+.nav__list {
+  display: inline-block;
+
+  @include adaptive(tab-min) {
+    display: flex;
+    gap: 20px;
+  }
+
+  @include adaptive(desk) {
+    gap: $base-gap;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-bottom: 24px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  color: $secondary-link-color;
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include adaptive(mob-min) {
+    font-size: 18px;
+  }
+
+  @include adaptive(tab-min) {
+    padding: 12px 0;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    color: $primary-link-color;
+  }
+}

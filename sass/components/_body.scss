@@ -1,0 +1,9 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $page-main-color;
+  background-color: $primary-bg-color;
+
+  &.mobile-open {
+    overflow: hidden;
+  }
+}

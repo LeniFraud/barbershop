@@ -1,0 +1,20 @@
+.btn {
+  @include centered-flex;
+  @include sizes(160px, 40px);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $primary-link-color;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  transition: color $duration $timing, background-color $duration $timing;
+
+  &:hover,
+  &:focus {
+    color: $primary-link-color;
+    background-color: $accent-color;
+  }
+}

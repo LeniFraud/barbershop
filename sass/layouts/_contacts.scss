@@ -1,0 +1,119 @@
+.contacts__wrap {
+  @include adaptive(desk) {
+    display: flex;
+  }
+}
+
+.contacts__section {
+  background-color: #191c26;
+  background-image: url('../images/contacts-bg-mob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include adaptive(desk) {
+    width: calc(50% - 15px);
+  }
+
+  .contacts__container {
+    @include adaptive(desk) {
+      max-width: 585px;
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 100px;
+    }
+  }
+
+  @include bg-image {
+    background-image: url('../images/contacts-bg-mob@2x.png');
+  }
+
+  @include adaptive(tab-min) {
+    background-image: url('../images/contacts-bg-tab.png');
+
+    @include bg-image {
+      background-image: url('../images/contacts-bg-tab@2x.png');
+    }
+  }
+
+  @include adaptive(desk) {
+    background-image: url('../images/contacts-bg-desk.png');
+
+    @include bg-image {
+      background-image: url('../images/contacts-bg-desl@2x.png');
+    }
+  }
+}
+
+.contacts__title {
+  margin-bottom: 40px;
+
+  @include adaptive(mob-only) {
+    text-align: center;
+  }
+}
+
+.address__wrap {
+  @include adaptive(tab-only) {
+    display: flex;
+    gap: $base-gap;
+  }
+}
+
+.address {
+  margin-bottom: 44px;
+
+  @include adaptive(desk) {
+    margin-bottom: 70px;
+  }
+}
+
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: $base-margin;
+  }
+}
+
+.address__link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+
+  @include adaptive(mob-min) {
+    font-size: 18px;
+  }
+
+  &--bold {
+    font-weight: 700;
+
+    @include adaptive(tab-min) {
+      max-width: 230px;
+    }
+  }
+}
+
+.address__icon {
+  flex-shrink: 0;
+  margin-right: 16px;
+  @include sizes(24px, 24px);
+}
+
+.contacts__headline {
+  margin-bottom: $base-margin;
+  color: $secondary-headline-color;
+
+  &::before {
+    background-color: rgba(157, 164, 189, 0.4);
+  }
+}
+
+.contacts__desc {
+  color: $secondary-text-color;
+
+  @include adaptive(mob-min) {
+    font-size: 18px;
+  }
+}

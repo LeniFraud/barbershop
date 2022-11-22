@@ -1,0 +1,23 @@
+.socials {
+  @include centered-flex;
+  gap: 10px;
+}
+
+.socials__link {
+  @include centered-flex;
+  @include sizes(44px, 44px);
+  color: $secondary-link-color;
+  border-radius: 50%;
+  background-color: $primary-bg-color;
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.socials__icon {
+  @include sizes(20px, 20px);
+  fill: currentColor;
+}

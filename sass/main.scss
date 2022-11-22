@@ -1,0 +1,24 @@
+@import './base/reset';
+
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/hidden';
+
+@import './components/body';
+@import './components/container';
+@import './components/section';
+@import './components/button';
+@import './components/subscriptions';
+@import './components/socials';
+@import './components/overlay';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/prices';
+@import './layouts/features';
+@import './layouts/barbers';
+@import './layouts/gallery';
+@import './layouts/booking';
+@import './layouts/contacts';
+@import './layouts/footer';

@@ -1,0 +1,78 @@
+.hero__container {
+  @include adaptive(mob-only) {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  @include adaptive(tab-min) {
+    padding-left: 135px;
+  }
+
+  @include adaptive(desk) {
+    padding-left: 115px;
+  }
+}
+
+.hero__content {
+  flex-grow: 1;
+  padding-top: 208px;
+  padding-bottom: 209px;
+  background-color: $spare-bg-color;
+  background-image: $overlay, url('../images/hero-slider3-mob.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include bg-image {
+    background-image: $overlay, url('../images/hero-slider3-mob@2x.jpg');
+  }
+
+  @include adaptive(tab-min) {
+    padding: 272px 75px 237px;
+    background-image: $overlay, url('../images/hero-slider3-tab.jpg');
+
+    @include bg-image {
+      background-image: $overlay, url('../images/hero-slider3-tab@2x.jpg');
+    }
+  }
+
+  @include adaptive(desk) {
+    padding: 272px 85px 208px;
+    background-image: $overlay, url('../images/hero-slider3-desk.jpg');
+
+    @include bg-image {
+      background-image: $overlay, url('../images/hero-slider3-desk@2x.jpg');
+    }
+  }
+}
+
+.hero__headline {
+  color: $transparent-headline-color;
+
+  @include adaptive(mob-only) {
+    letter-spacing: 0.1em;
+  }
+}
+
+.hero__title {
+  font-size: 40px;
+  line-height: calc(56 / 48);
+
+  @include adaptive(mob-min) {
+    font-size: 48px;
+  }
+
+  @include adaptive(desk) {
+    font-size: 72px;
+    line-height: calc(85 / 72);
+  }
+}
+
+.hero__desc {
+  max-width: 390px;
+  color: $secondary-text-color;
+
+  @include adaptive(mob-only) {
+    max-width: 340px;
+  }
+}

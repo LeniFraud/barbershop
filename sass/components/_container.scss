@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include adaptive(mob-min) {
+    max-width: 448px;
+  }
+
+  @include adaptive(tab-min) {
+    max-width: 720px;
+  }
+  @include adaptive(desk) {
+    max-width: 1200px;
+  }
+}
