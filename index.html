@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbershop &#127828;</title>
+    <title>Barbershop</title>
+    <link rel="icon" type="icon" href="./images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <button type="button" aria-label="Go to the top" class="page-up-btn">
+      <svg class="page-up-icon">
+        <use href="./images/icons.svg#up-arrow"></use>
+      </svg>
+    </button>
     <!-- Header -->
     <header class="header">
       <div class="container header__container">
@@ -60,7 +67,7 @@
               >
             </div>
             <ul class="subscriptions header__subscriptions">
-              <li class="subscriptions__item">
+              <li class="subscriptions__item subscriptions__item--column">
                 <a
                   href=""
                   target="_blank"
@@ -69,7 +76,7 @@
                   >Instagram</a
                 >
               </li>
-              <li class="subscriptions__item">
+              <li class="subscriptions__item subscriptions__item--column">
                 <a
                   href=""
                   target="_blank"
@@ -85,7 +92,7 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
             <div class="container">
@@ -97,7 +104,38 @@
             </div>
           </div>
         </div>
+      </section> -->
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-first"></div>
+              <div class="swiper-slide swiper-slide-second"></div>
+              <div class="swiper-slide swiper-slide-third"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev">
+              <p>Back</p>
+            </div>
+            <div class="swiper-button-next">
+              <p>Forward</p>
+            </div>
+
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+
+          <div class="container hero__content">
+            <p class="section__headline hero__headline">A hair salon for men in Kyiv</p>
+            <h1 class="section__title hero__title">BarberShop</h1>
+            <p class="section__desc hero__desc">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            </p>
+          </div>
+        </div>
       </section>
+
       <!-- About section -->
       <section class="section" id="about">
         <div class="container about__container">
@@ -548,6 +586,9 @@
         <p class="footer__text">&copy;Copyright 2020</p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/up-button.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

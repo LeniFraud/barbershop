@@ -1,14 +1,19 @@
 .footer {
   padding: 44px 0;
+
+  @include adaptive(tab-min) {
+    padding: 56px 0;
+  }
 }
 
 .footer__container {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+  @include adaptive(tab-min) {
+    @include centered-flex(space-between);
+    flex-direction: row-reverse;
+  }
 }
 
-.footer-text {
+.footer__text {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);

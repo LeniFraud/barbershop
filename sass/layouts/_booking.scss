@@ -3,6 +3,7 @@
 
   @include adaptive(desk) {
     width: calc(50% + 15px);
+    padding-top: 130px;
   }
 }
 
@@ -10,6 +11,7 @@
   @include adaptive(desk) {
     max-width: 615px;
     margin: 0 0 0 auto;
+    padding-right: 30px;
   }
 }
 

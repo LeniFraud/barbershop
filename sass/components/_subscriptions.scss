@@ -45,9 +45,19 @@
 }
 
 .footer__subscriptions {
+  @include centered-flex(flex-end);
+  gap: 15px;
+
+  @include adaptive(mob-only) {
+    margin-bottom: 20px;
+  }
+
+  @include adaptive(mob-min) {
+    gap: 40px;
+  }
 }
 
-.subscriptions__item {
+.subscriptions__item--column {
   &:first-child {
     @include adaptive(mob-only) {
       margin-bottom: 24px;

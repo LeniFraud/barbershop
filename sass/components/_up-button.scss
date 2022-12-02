@@ -1,0 +1,52 @@
+.page-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  @include sizes(36px, 36px);
+  color: $transparent-headline-color;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include adaptive(mob-min) {
+    bottom: 10px;
+    right: 20px;
+  }
+
+  @include adaptive(tab-min) {
+    bottom: 10px;
+    right: 29px;
+    @include sizes(48px, 48px);
+  }
+
+  @include adaptive(desk) {
+    bottom: 30px;
+    right: 60px;
+    @include sizes(60px, 60px);
+  }
+}
+
+.page-up-icon {
+  flex-shrink: 0;
+  @include sizes(36px, 36px);
+  fill: currentColor;
+
+  @include adaptive(tab-min) {
+    @include sizes(48px, 48px);
+  }
+
+  @include adaptive(desk) {
+    @include sizes(60px, 60px);
+  }
+}

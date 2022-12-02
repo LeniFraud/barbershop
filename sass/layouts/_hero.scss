@@ -1,4 +1,6 @@
 .hero__container {
+  position: relative;
+
   @include adaptive(mob-only) {
     max-width: 100%;
     padding: 0;
@@ -14,35 +16,22 @@
 }
 
 .hero__content {
-  flex-grow: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
   padding-top: 208px;
-  padding-bottom: 209px;
-  background-color: $spare-bg-color;
-  background-image: $overlay, url('../images/hero-slider3-mob.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  pointer-events: none;
+  transform: translateX(-50%);
 
-  @include bg-image {
-    background-image: $overlay, url('../images/hero-slider3-mob@2x.jpg');
+  @include adaptive(tab-min) {
+    padding-top: 272px;
+    padding-left: 225px;
   }
 
   @include adaptive(tab-min) {
-    padding: 272px 75px 237px;
-    background-image: $overlay, url('../images/hero-slider3-tab.jpg');
-
-    @include bg-image {
-      background-image: $overlay, url('../images/hero-slider3-tab@2x.jpg');
-    }
-  }
-
-  @include adaptive(desk) {
-    padding: 272px 85px 208px;
-    background-image: $overlay, url('../images/hero-slider3-desk.jpg');
-
-    @include bg-image {
-      background-image: $overlay, url('../images/hero-slider3-desk@2x.jpg');
-    }
+    padding-top: 272px;
+    padding-left: 215px;
   }
 }
 

@@ -1,4 +1,7 @@
 .header {
+  //
+  z-index: 5;
+  //
   position: absolute;
   width: 100%;
   background-color: transparent;
@@ -15,6 +18,7 @@
 
 .logo {
   @include adaptive(tab-min) {
+    z-index: 1;
     margin: 0 57px 0 11px;
   }
 
@@ -63,7 +67,9 @@
   position: absolute;
   top: 48px;
   right: 15px;
-  z-index: 100;
+  //
+  z-index: 300;
+  //
   @include centered-flex();
   background-color: transparent;
   border: none;

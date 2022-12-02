@@ -13,13 +13,13 @@
 
   @include adaptive(desk) {
     width: calc(50% - 15px);
+    padding-top: 130px;
   }
 
   .contacts__container {
     @include adaptive(desk) {
       max-width: 585px;
       margin: 0;
-      padding-top: 10px;
       padding-left: 100px;
     }
   }
@@ -61,7 +61,13 @@
 }
 
 .address {
-  margin-bottom: 44px;
+  @include adaptive(mob-only) {
+    margin-bottom: 44px;
+  }
+
+  @include adaptive(tab-only) {
+    min-width: 330px;
+  }
 
   @include adaptive(desk) {
     margin-bottom: 70px;
@@ -81,6 +87,12 @@
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: $secondary-text-color;
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 
   @include adaptive(mob-min) {
     font-size: 18px;
@@ -99,6 +111,7 @@
   flex-shrink: 0;
   margin-right: 16px;
   @include sizes(24px, 24px);
+  stroke: currentColor;
 }
 
 .contacts__headline {
