@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbershop</title>
+    <meta name="description" content="Barbershop website" />
+    <meta name="title" property="og:title" content="Barbershop" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="https://pasteboard.co/1h6DGFnW7PvI.jpg" />
+    <meta name="description" property="og:description" content="Barbershop website" />
+    <meta name="author" content="Anastasiia Klyosova" />
     <link rel="icon" type="icon" href="./images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,8 +46,30 @@
             <use href="./images/icons.svg#close" class="menu__icon menu__icon--close"></use>
           </svg>
         </button>
+        <!-- <button
+          type="button"
+          class="menu__btn"
+          aria-label="Mobile menu toggle"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#menu" class="menu__icon menu__icon--open"></use>
+          </svg>
+        </button> -->
         <div class="overlay is-hidden" data-menu>
           <div class="menu">
+            <button
+              type="button"
+              class="menu__btn"
+              aria-label="Mobile menu toggle"
+              aria-expanded="false"
+              data-menu-button
+            >
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#close" class="menu__icon menu__icon--close"></use>
+              </svg>
+            </button>
             <nav class="nav">
               <ul class="nav__list" data-list>
                 <li class="nav__item">
@@ -509,7 +536,7 @@
                 ></textarea>
                 <label for="message" class="form__label">Message</label>
               </div>
-              <button type="button" class="btn form__btn">Send</button>
+              <button type="submit" class="btn form__btn">Send</button>
             </form>
           </div>
         </section>

@@ -1294,6 +1294,7 @@ body.mobile-open {
     flex-direction: column-reverse;
     gap: 20px;
     margin-left: auto;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1423,7 +1424,7 @@ body.mobile-open {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .contacts__section {
-    background-image: url("../images/contacts-bg-desl@2x.png");
+    background-image: url("../images/contacts-bg-desk@2x.png");
   }
 }
 

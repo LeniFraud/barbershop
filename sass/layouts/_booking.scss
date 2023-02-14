@@ -97,6 +97,7 @@
     flex-direction: column-reverse;
     gap: 20px;
     margin-left: auto;
+    margin-right: 20px;
   }
 
   @include adaptive(desk) {
